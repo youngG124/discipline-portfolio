@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <p>Contact me at: <a href="mailto:newyoung124@naver.com">newyoung124@naver.com</a></p>
-        <p>"Everyday is important day"</p>
+        <p>"Everyday is important"</p>
     </footer>
 </template>
 
