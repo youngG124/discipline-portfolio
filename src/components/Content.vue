@@ -1,40 +1,19 @@
 <template>
     <main class="blog-content">
         <!-- Example Blog Post with Text -->
-        <div class="blog-post">
-            <h2>This blog is...</h2>
-            <p>
-                For tracking disciplines, curating some of saved images.
-                <br>Blog's server is on EC2(AWS), made of SpringBoot(Java),
-                <br>Images are on local SSD and fastAPI(python) is serving it.
-                <br>Visit 'about' and check more information.
-                <br>You can contact me at: newyoung124@naver.com
-            </p>
-        </div>
+        <About />
 
-        <!-- Example Blog Post with Image Grid -->
-        <div class="blog-post">
-            <MyDiscipline />
-        </div>
+        <!-- Example Blog Post with Image Grid -->        
+        <Discipline />
 
         <!-- Box to display on hover -->
         <div id="infoBox" class="info-box">
             <h4 id="infoBoxTitle"></h4>
         </div>
 
-        <!-- Example Blog Post with Image Grid -->
-        <div class="blog-post">
-            <h2>Images</h2>
-            <div class="image-grid">
-                <img src="https://via.placeholder.com/400x400" alt="Image 1">
-                <img src="https://via.placeholder.com/400x400" alt="Image 2">
-                <img src="https://via.placeholder.com/400x400" alt="Image 3">
-                <img src="https://via.placeholder.com/400x400" alt="Image 4">
-                <img src="https://via.placeholder.com/400x400" alt="Image 5">
-                <img src="https://via.placeholder.com/400x400" alt="Image 6">
-            </div>
-        </div>
-
+        <!-- Example Blog Post with Image Grid -->        
+        <ImageGrid />
+        
         <!-- Example Blog Post with Special HTML Content -->
         <div class="blog-post">
             <h2>Music</h2>
@@ -55,12 +34,16 @@
 </template>
 
 <script>
-import MyDiscipline from './Discipline.vue';
+import Discipline from './Discipline.vue';
+import About from './About.vue';
+import ImageGrid from './ImageGrid.vue';
 
 export default {
   name: 'MyContent',
   components: {
-    MyDiscipline,
+    Discipline,
+    About,
+    ImageGrid,
   },
 };
 </script>

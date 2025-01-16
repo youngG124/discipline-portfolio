@@ -1,23 +1,25 @@
 <template>
-    <div class="Discipline">
-        <h2>Disciplines</h2>
-        <br>
-        <div id="discipline" class="discipline-container">
-            <div class="discipline-header">
-                <h3>run</h3>
-                <button class="align-right">record today</button>
+    <div class="blog-post">
+        <div class="Discipline">
+            <h2>Disciplines</h2>
+            <br>
+            <div id="discipline" class="discipline-container">
+                <div class="discipline-header">
+                    <h3>run</h3>
+                    <button class="align-right">record today</button>
+                </div>
+                <div id="annual_calendar_1"></div>
             </div>
-            <div id="annual_calendar_1"></div>
-        </div>
-        <br>
-        <div id="discipline" class="discipline-container">
-            <div class="discipline-header">
-                <h3>read</h3>
-                <button class="align-right">record today</button>
+            <br>
+            <div id="discipline" class="discipline-container">
+                <div class="discipline-header">
+                    <h3>read</h3>
+                    <button class="align-right">record today</button>
+                </div>
+                <div id="annual_calendar_2"></div>
             </div>
-            <div id="annual_calendar_2"></div>
         </div>
-    </div>   
+    </div>    
 </template>
 
 <script>
@@ -25,16 +27,18 @@ export default {
     name: 'MyDiscipline',
 };
 
+console.log("console.log test");
+
 // const disciplineList = [data1, data2, data3, andOrSo, "..."];
 // we need to make annual calendar via this list
 // and get annual data with the discipline name from DB
 // and paint the calendar green with the data
-
+/*
 const today = new Date();
 const dayIndex = today.getDay() + 1;
 
 console.log("dayIndex : " + dayIndex);
-/*
+
 function createCalendar(elementId) {   const tbody = document.createElement('table');
     tbody.style = 'border-spacing:4px;';
 }
