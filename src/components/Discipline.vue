@@ -2,7 +2,6 @@
     <div class="blog-post">
       <div class="Discipline">
         <h2>Disciplines</h2>
-        <br />
         <div id="discipline" class="discipline-container">
           <div class="discipline-header">
             <h3>Run</h3>
@@ -10,7 +9,6 @@
           </div>
           <div id="annual_calendar_1"></div>
         </div>
-        <br />
         <div id="discipline" class="discipline-container">
           <div class="discipline-header">
             <h3>Read</h3>
@@ -119,7 +117,7 @@
   }
   
   .discipline-container {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   
   .discipline-header {
