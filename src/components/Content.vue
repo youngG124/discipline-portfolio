@@ -1,8 +1,5 @@
 <template>
     <main class="blog-content">
-        <!-- Example Blog Post with Text -->
-        <About />
-
         <!-- Example Blog Post with Image Grid -->        
         <Discipline />
 
@@ -13,6 +10,9 @@
 
         <!-- Example Blog Post with Image Grid -->        
         <ImageGrid />
+        
+        <!-- Example Blog Post with Text -->
+        <About />
         
         <!-- Example Blog Post with Special HTML Content -->
         <Music />
