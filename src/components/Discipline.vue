@@ -112,18 +112,4 @@
   </script>
   
   <style>
-  .align-right {
-    float: right;
-  }
-  
-  .discipline-container {
-    margin-bottom: 0px;
-  }
-  
-  .discipline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  </style>
-  
+  </style>  
