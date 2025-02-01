@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       dayIndex: new Date().getDay() + 1,
-      originalDisciplineRecord: [0, 1, 0, 1], // Example record from the database
+      originalDisciplineRecord: [0, 1, 1, 1], // Example record from the database
       defaultDisciplineRecord: Array(364).fill(0), // Default empty record
     };
   },
@@ -61,27 +61,17 @@ export default {
           day.appendChild(row);
         });
       });
-
-      dayNumber = 364;
-      day_arr.forEach((day, index) => {
-        if (index < this.dayIndex) {
-          const row = this.createRow(disciplineRecord[dayNumber], dayNumber);
-          dayNumber++;
-          day.appendChild(row);
-        }
-      });
-
       document.getElementById(elementId).appendChild(tbody);
     },
     createRow(recordType, dayNumber) {
       const row = document.createElement("td");
-      let styleString = "width:15px; height:10px; border-radius:2px;";
-      styleString += recordType === 1 ? "background-color:green;" : "background-color:lightgrey;";
+      let styleString = "width:15px; height:10px; border-radius:2px; background-color:";
+      styleString += recordType === 1 ? "green;" : "lightgrey;";
 
       const today = new Date();
       const dayDataString = "date: " + this.subtractDays(today, 363 + this.dayIndex - dayNumber);
 
-      row.setAttribute("data-info", dayDataString);
+      row.setAttribute("date", dayDataString);
       row.className = "day";
       row.style = styleString;
       row.id = dayNumber;
@@ -101,6 +91,8 @@ export default {
         disciplineRecord.splice(-additionalRecords.length, additionalRecords.length, ...additionalRecords);
       }
 
+      console.log(disciplineRecord);
+
       return disciplineRecord;
     },
     recordToday(activity) {
@@ -118,7 +110,7 @@ export default {
 }
 
 .day:hover::after {
-  content: attr(data-info);
+  content: attr(date);
   position: absolute;
   top: -25px;
   left: 50%;
@@ -131,6 +123,4 @@ export default {
   white-space: nowrap;
   z-index: 10;
 }
-
-
 </style>  
