@@ -1,5 +1,8 @@
 <template>
     <main class="blog-content">
+        <!-- Example Blog Post with Text -->
+        <About />
+
         <!-- Example Blog Post with Image Grid -->        
         <Discipline />
 
@@ -21,16 +24,16 @@
 
 <script>
 import Discipline from './Discipline.vue';
-import About from './About.vue';
-import ImageGrid from './ImageGrid.vue';
+//import About from './About.vue';
+//import ImageGrid from './ImageGrid.vue';
 import Music from './Music.vue';
 
 export default {
   name: 'MyContent',
   components: {
     Discipline,
-    About,
-    ImageGrid,
+    //About,
+    //ImageGrid,
     Music,
   },
 };
