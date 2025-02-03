@@ -1,8 +1,5 @@
 <template>
     <main class="blog-content">
-        <!-- Example Blog Post with Text -->
-        <About />
-
         <!-- Example Blog Post with Image Grid -->        
         <Discipline />
 
@@ -10,12 +7,6 @@
         <div id="infoBox" class="info-box">
             <h4 id="infoBoxTitle"></h4>
         </div>
-
-        <!-- Example Blog Post with Image Grid -->        
-        <ImageGrid />
-        
-        <!-- Example Blog Post with Text -->
-        <About />
         
         <!-- Example Blog Post with Special HTML Content -->
         <Music />
