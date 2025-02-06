@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Discipline from './Discipline.vue';
+import Discipline from './DisciplineCal.vue';
 //import About from './About.vue';
 //import ImageGrid from './ImageGrid.vue';
 import Music from './Music.vue';
