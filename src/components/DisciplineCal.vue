@@ -27,7 +27,7 @@ import axios from 'axios';
 const dayIndex = ref(new Date().getDay() + 1);
 const originalDisciplineRecord = ref([0, 1, 1, 1]); // Example record from the database
 const defaultDisciplineRecord = ref(Array(364).fill(0)); // Default empty record
-const responseMessage = ref('');
+//const responseMessage = ref('');
 
 const createRow = (recordType, dayNumber) => {
   const row = document.createElement("td");
@@ -103,16 +103,15 @@ const getDisciplineRecord = () => {
   return disciplineRecord;
 };
 
-const recordToday = async (activity) => {
-  try {
-    const response = await axios.post('https://example.com/api/record', {
-      activity,
-      date: new Date().toISOString().split('T')[0],
-    });
-    responseMessage.value = `Success: ${response.data.message}`;
-  } catch (error) {
-    responseMessage.value = `Error: ${error.response?.data?.message || error.message}`;
-  }
+const recordToday = async () => {
+
+  axios.get('http://15.164.146.64:3000/api/message')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error('Error fetching the message:', error);
+  });
 };
 
 onMounted(() => {
