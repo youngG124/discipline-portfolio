@@ -106,11 +106,13 @@ const recordToday = async (discipline) => {
   console.log(discipline);
 
   try {
-    const response = await axios.post('http://15.164.146.64:3000/api/users', {
-      discipline: this.discipline,
-
+    const response = await axios.post('http://15.164.146.64:3000/insert', {
+      discipline: 'discipline_' + discipline,
+      text : 'sample text from vue axios',
+    }, {
+      headers : {"Content-Type" : "application/json"},
     });
-    console.log('server response : ', response.data);
+    console.log('server response : ', response.data.message);
   } catch (error) {
     console.error('error : ', error);
   }
